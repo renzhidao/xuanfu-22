@@ -1,0 +1,16 @@
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+<application
+    <!-- 去掉这一行 android:name=".App" -->
+    android:allowBackup="true"
+    android:icon="@mipmap/ic_launcher"
+    android:label="@string/app_name"
+    android:roundIcon="@mipmap/ic_launcher_round"
+    android:supportsRtl="true"
+    android:theme="@style/Theme.AppCompat.Light">
+
+结论
+- 这次崩溃不是提取规则问题，是清单引用了不存在的 Application 类。
+- 推荐按方案A新增 App.kt，既修崩溃又把崩溃日志持久化，后面定位问题更快。
+</manifest>
